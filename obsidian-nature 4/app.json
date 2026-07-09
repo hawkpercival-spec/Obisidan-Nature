@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "Obsidian Nature",
+    "slug": "obsidian-nature",
+    "scheme": "obsidiannature",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#05070B"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "org.asphodelpress.obsidiannature",
+      "buildNumber": "1",
+      "usesAppleSignIn": true,
+      "entitlements": {
+        "com.apple.developer.applesignin": ["Default"]
+      },
+      "infoPlist": {
+        "UIBackgroundModes": ["audio"],
+        "NSUserNotificationsUsageDescription": "Obsidian Nature sends your Nightly Inventory exercise each evening.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "plugins": [
+      "expo-apple-authentication",
+      "expo-secure-store",
+      "expo-font",
+      [
+        "expo-notifications",
+        { "icon": "./assets/notification-icon.png", "color": "#B3121E" }
+      ],
+      [
+        "expo-av",
+        { "microphonePermission": false }
+      ]
+    ],
+    "extra": {
+      "authBaseUrl": "https://YOUR_BETTER_AUTH_SERVER.example.com",
+      "analysisBaseUrl": "https://YOUR_BETTER_AUTH_SERVER.example.com",
+      "revenueCatApiKeyIos": "appl_YOUR_REVENUECAT_PUBLIC_KEY"
+    }
+  }
+}
